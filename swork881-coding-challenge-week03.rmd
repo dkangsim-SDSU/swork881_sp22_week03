@@ -1,0 +1,90 @@
+---
+title: "week 03 coding challenge"
+author: "."
+date: ""
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F, message = F)
+```
+
+
+```{r load libraries}
+
+```
+
+
+```{r load data}
+
+```
+
+We want to explore whether higher risk of depression increases alcohol consumtion. 
+
+Based on the Latino Health Survey codebook, the four items of depression (PTSD-4; page 6) need to be reversed.
+
+Your task is to manipulate your data using the `tidyverse`'s `mutate`, `case_when` functions and run a series of logistic regression analyses. Use Google search as needed.
+
+Challenge 1: mutate new variables: 
+- `ptsd_mean` (average of four ptsd items)
+- `ptsd_mean_rev` (reverse of the `ptsd_mean` variable; hint: 6- value)
+- `ptsd_mean_rev_std` (standardized value of `ptsd_mean`)
+- `audit_c` (participants who responded 1 or 2 ~ 1; else ~0)
+
+For your reference: (pg 8 of the codebook)
+How often did you have a drink containing alcohol in the past year? 
+1. Four or more times a week <-- coded as '1' 
+2. Two to three times per week <-- coded as '1'
+3. Two to four times a month <-- coded as '0'
+4. Monthly or less <- coded as '0'
+5. Never <- coded as '0'
+
+```{r data wrangling}
+
+```
+
+
+#Now we will be running several logistic regression and compare the results:
+
+Run logistic regression using `ptsd_mean_rev` adjusting for age, sex, and education; use `tidy` function for output; exponent your results and interpret your result using odds ratio
+```{r logistic regression 1}
+
+```
+
+Interpretation: 
+[ ]
+
+Use `ggfortify`'s `autoplot` function to do model diagnostics
+```{r}
+
+```
+
+Explain diagnostic plots:
+[ ]
+
+
+
+Run logistic regression using `ptsd_mean_rev_std` adjusting for age, sex, and education; use `tidy` function for output; use `divide-by-four` approach and interpret your result using probability scale. 
+```{r}
+
+```
+Interpretation
+[ ]
+
+
+
+#Next, visualization
+Use `ggplot` to duplicate the figure
+Using the `ptsd_mean_rev` variable you created before, you would need to categorize the mean value into four categories: 
+if ptsd_mean_rev is :
+1-1.9 ~ 1 ; 
+2-2.9 ~2; 
+3-3.9 ~ 3; 
+4+ ~ 4. 
+
+Refer to Healy's book or Google search as a guide. 
+
+```{r visualization}
+
+```
+
